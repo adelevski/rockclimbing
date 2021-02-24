@@ -1,2 +1,3 @@
 # rockclimbing
- rockclimbing projects, webscraping, grade counting, stats, etc..
+ rockclimbing projects, webscraping, grade counting, stats science, etc...
+ 
