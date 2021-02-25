@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup as bs
-import requests, pprint
+import requests
 
 URL = 'https://www.planetmountain.com/en/news?genere=1&page='
 
@@ -18,21 +18,11 @@ def pull_articles(numpages=1, term='9b'):
                 links.append('https://www.planetmountain.com' + post.find('a').get('href'))
     return articles, thumbs, links
     
-articles, thumbs, links = pull_articles(1, '8B+')
-print(articles)
-print(thumbs)
-print(links)
+articles, thumbs, links = pull_articles(10, '9b')
+items = list(zip(articles, thumbs, links))
+for item in items:
+    print(item)
 
-# page = 1
-# term = '8b+'
-# source = requests.get(URL + str(page)).text
-# soup = bs(source, 'lxml')
-# links = []
-# posts = soup.find_all("div", class_='post clearfix')
-# for post in posts:            
-#     if term in str(post.h2.text):
-#         links.append('https://www.planetmountain.com' + post.find('a').get('href'))
-# print(links)
 
 
 
