@@ -18,11 +18,6 @@ def pull_articles(numpages=1, term='9b'):
                 links.append('https://www.planetmountain.com' + post.find('a').get('href'))
     return articles, thumbs, links
     
-articles, thumbs, links = pull_articles(10, '9b')
-items = list(zip(articles, thumbs, links))
-for item in items:
-    print(item)
-
 
 
 
